@@ -195,6 +195,3 @@ class TestAutOperatio(TestCase):
                         b = sub_meth(a, 2)
                         self.assertIsNot(a, b)
                         self.assertEqual(SubClass.counter, 6)
-
-
-main()

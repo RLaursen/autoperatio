@@ -92,5 +92,4 @@ def _getitem_closure(cls, supercls, super_new, super_init):
 
     method_wrapper.__qualname__ = f'AutOperatio wrapped {supercls.__name__}.__getitem__'
     method_wrapper.__name__ = f'AutOperatio wrapped {supercls.__name__}.__getitem__'
-
     return method_wrapper
