@@ -43,7 +43,7 @@ Inherit from Autoperatio and the class you wish to subclass in the same subclass
     class Bar(AutOperatio, set)   # As will this
         ...
 
-Built-in to use methods from must be last thing in in __mro__ other than object or AutoOperatio...
+Built-in to use methods from must be last thing in in \_\_mro\_\_ other than object or AutoOperatio...
 or you need to specify superclass=<class> in the signature of every subclass definition like this:
 
     class Foo(list, AutOperatio, SomethingElse, superclass=list):  # Must specify or SomethingElse will be used
@@ -55,7 +55,7 @@ or you need to specify superclass=<class> in the signature of every subclass def
     class SubBar(AutOperatio, tuple, Bar, superclass=tuple):       # Required here too and in all subclasses
         ...
         
-By default, superclass __new__ and __init__ are used for producing new instances. This prevents overriding them
+By default, superclass \_\_new\_\_ and \_\_init\_\_ are used for producing new instances. This prevents overriding them
 from breaking anything. If this isn't desired behavior, use kwargs in signature of class definitions like this:
 
     class Foo(list, AutOperatio, super_new=False, super_init=False):
@@ -64,9 +64,9 @@ from breaking anything. If this isn't desired behavior, use kwargs in signature 
 Differences from collections.UserList and collections.UserDict when used for list and dict:
 ------------------------------------------------------------------------------------------
 - Not wrappers
-- Methods do not have to rely on __new__ and __init__ of subclass
+- Methods do not have to rely on \_\_new\_\_ and \_\_init\_\_ of subclass
 - No data, __cast, or any other extra class attributes
-- The only apparent addition to subclass over built-ins is __closure__ in redefined methods
+- The only apparent addition to subclass over built-ins is \_\_closure\_\_ in redefined methods
 
 
 
